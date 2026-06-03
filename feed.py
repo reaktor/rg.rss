@@ -33,8 +33,8 @@ SRC = "https://storage.googleapis.com/inderes-widgets-prod-assets/reaktor/public
 RELEASE = "https://group.reaktor.com/release/{}"
 LANG = None  # fi+en are separate items here; set to None to include both
 OUT = Path("public/feed.xml")
-FEED_SELF = "https://jkseppan.github.io/rg.rss/feed.xml"  # canonical published location
-UA = "reaktor-rss/1.0 (+https://github.com/jkseppan/rg.rss)"
+FEED_SELF = "https://reaktor.github.io/rg.rss/feed.xml"  # canonical published location
+UA = "reaktor-rss/1.0 (+https://github.com/reaktor/rg.rss)"
 MAX_DESC = 600
 SKIP_PREFIXES = ("reaktor group oy press release", "reaktor group oy lehdistötiedote")
 
