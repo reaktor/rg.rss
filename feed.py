@@ -100,7 +100,8 @@ def build() -> None:
         pubs = [p for p in pubs if p.get("lang") == LANG]
 
     feed_url = os.environ.get("FEED_URL")
-    cache = load_cache(feed_url or str(OUT))
+    rebuild = os.environ.get("REBUILD", "").lower() in ("1", "true", "yes")
+    cache = {} if rebuild else load_cache(feed_url or str(OUT))
     records: dict[str, dict] = dict(cache)  # seed with retained (possibly-dropped) entries
 
     scraped = 0
